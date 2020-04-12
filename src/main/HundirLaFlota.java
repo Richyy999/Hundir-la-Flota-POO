@@ -115,12 +115,29 @@ public class HundirLaFlota {
 			// Si el disparo ha sido Agua pinto una A en la posición del disparo
 			case "Agua":
 				tableroSolucion[y][x] = 'A';
+				break;
+			default:
+				pintarHundido(tablero[y][x]);
+				break;
 			}
 			System.out.println(res);
 			// Si las coordenadas están fuera del tablero informo al atacante
 		} else
 			System.out.println("Coordenada fuera del tablero.");
 		mostrarTablero(tableroSolucion);
+	}
+
+	/**
+	 * Actualiza el tablero indicando que barcos han sido hundidos mediante una H
+	 * 
+	 * @param barco barco hundido
+	 */
+	private static void pintarHundido(Barco barco) {
+		int[] x = barco.getX();
+		int[] y = barco.getY();
+		for (int i = 0; i < x.length; i++) {
+			tableroSolucion[y[i]][x[i]] = 'H';
+		}
 	}
 
 	/**
