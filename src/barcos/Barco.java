@@ -16,22 +16,41 @@ public abstract class Barco {
 	/**
 	 * Array con las coordenadas x de los barcos
 	 */
-	protected int[] x;
+	private int[] x;
 	/**
 	 * Array con las coordenadas y de los barcos
 	 */
-	protected int[] y;
+	private int[] y;
 
 	/**
 	 * Estado de los barcos. La clave son las coordeadas del barco y el valor el
 	 * estado del barco en esa coordenada
 	 */
-	protected Map<String, String> estado = new HashMap<String, String>();
+	private Map<String, String> estado;
 
 	/**
 	 * Si el barco está hundido
 	 */
-	protected boolean hundido = false;
+	private boolean hundido;
+
+	/**
+	 * Constructor de barcos en el que se inicializan los arrays de coordenadas, el
+	 * estado y si está hundido
+	 * 
+	 * @param x longitud del array de coordenadas x
+	 * @param y longitud del array de coordenadas y
+	 * 
+	 * @see Barco#estado
+	 * @see Barco#hundido
+	 * @see Barco#x
+	 * @see Barco#y
+	 */
+	public Barco(int x, int y) {
+		estado = new HashMap<String, String>();
+		hundido = false;
+		this.x = new int[x];
+		this.y = new int[y];
+	}
 
 	/**
 	 * Intenta crear un barco e informa al jugador del resultado obtenido

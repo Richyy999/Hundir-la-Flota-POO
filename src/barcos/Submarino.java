@@ -9,7 +9,6 @@ package barcos;
 public class Submarino extends Barco {
 
 	public Submarino() {
-		this.x = new int[3];
-		this.y = new int[3];
+		super(3, 3);
 	}
 }

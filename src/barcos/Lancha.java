@@ -9,7 +9,6 @@ package barcos;
 public class Lancha extends Barco {
 
 	public Lancha() {
-		this.x = new int[2];
-		this.y = new int[2];
+		super(2, 2);
 	}
 }

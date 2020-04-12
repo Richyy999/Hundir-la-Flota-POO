@@ -9,7 +9,6 @@ package barcos;
 public class Fragata extends Barco {
 
 	public Fragata() {
-		this.x = new int[3];
-		this.y = new int[3];
+		super(3, 3);
 	}
 }
