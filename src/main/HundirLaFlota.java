@@ -51,12 +51,12 @@ public class HundirLaFlota {
 		crearBarco(p);
 		mostrarTablero(tableroCreacion);
 
-		Barco s1 = new Submarino();
-		crearBarco(s1);
-		mostrarTablero(tableroCreacion);
-		Barco s2 = new Submarino();
-		crearBarco(s2);
-		mostrarTablero(tableroCreacion);
+//		Barco s1 = new Submarino();
+//		crearBarco(s1);
+//		mostrarTablero(tableroCreacion);
+//		Barco s2 = new Submarino();
+//		crearBarco(s2);
+//		mostrarTablero(tableroCreacion);
 
 		Barco f1 = new Fragata();
 		crearBarco(f1);
@@ -65,12 +65,12 @@ public class HundirLaFlota {
 		crearBarco(f2);
 		mostrarTablero(tableroCreacion);
 
-		Barco l1 = new Lancha();
-		crearBarco(l1);
-		mostrarTablero(tableroCreacion);
-		Barco l2 = new Lancha();
-		crearBarco(l2);
-		mostrarTablero(tableroCreacion);
+//		Barco l1 = new Lancha();
+//		crearBarco(l1);
+//		mostrarTablero(tableroCreacion);
+//		Barco l2 = new Lancha();
+//		crearBarco(l2);
+//		mostrarTablero(tableroCreacion);
 
 		esconderTablero();
 		int turno = 0;
@@ -114,7 +114,7 @@ public class HundirLaFlota {
 				break;
 			// Si el disparo ha sido Agua pinto una A en la posición del disparo
 			case "Agua":
-				tableroSolucion[x][y] = 'A';
+				tableroSolucion[y][x] = 'A';
 			}
 			System.out.println(res);
 			// Si las coordenadas están fuera del tablero informo al atacante
@@ -217,7 +217,7 @@ public class HundirLaFlota {
 	 * Proceso el disparo
 	 * 
 	 * @param x coordenada x del disparo
-	 * @param y coordenada x del disparo
+	 * @param y coordenada y del disparo
 	 * @return resultado de la operación
 	 */
 	private static String disparo(int x, int y) {
